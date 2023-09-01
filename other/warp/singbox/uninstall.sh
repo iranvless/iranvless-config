@@ -1,3 +1,3 @@
 
-systemctl stop hiddify-warp
-systemctl disable hiddify-warp
+systemctl stop iranvless-warp
+systemctl disable iranvless-warp

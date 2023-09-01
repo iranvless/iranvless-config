@@ -9,9 +9,9 @@ ENV TZ Etc/UTC
 ENV DEBIAN_FRONTEND noninteractive
 
 USER root
-WORKDIR /opt/hiddify-config/
+WORKDIR /opt/iranvless-config/
 COPY . .
 # RUN mkdir -p ~/.ssh && echo "StrictHostKeyChecking no " > ~/.ssh/config
 RUN bash install.sh install-docker
 RUN curl -L https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl.py -o /usr/bin/systemctl
-ENTRYPOINT ["/bin/bash","-c", "./apply_configs.sh && tail -f /opt/hiddify-config/log/system/*"]
+ENTRYPOINT ["/bin/bash","-c", "./apply_configs.sh && tail -f /opt/iranvless-config/log/system/*"]

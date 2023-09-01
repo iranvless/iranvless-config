@@ -1,21 +1,21 @@
 systemctl kill iranvless-admin.service >/dev/null 2>&1
-systemctl disable iranvless-admin.service >/dev/null 2>&1
+systemctl disable hiddify-admin.service >/dev/null 2>&1
 #userdel -f iranvless-panel 2>&1
 useradd -m iranvless-panel -s /bin/bash >/dev/null 2>&1
-chown -R iranvless-panel:iranvless-panel /home/iranvless-panel/ >/dev/null 2>&1
-su iranvless-panel -c localectl set-locale LANG=C.UTF-8 >/dev/null 2>&1
-su iranvless-panel -c update-locale LANG=C.UTF-8 >/dev/null 2>&1
+chown -R hiddify-panel:hiddify-panel /home/hiddify-panel/ >/dev/null 2>&1
+su hiddify-panel -c localectl set-locale LANG=C.UTF-8 >/dev/null 2>&1
+su hiddify-panel -c update-locale LANG=C.UTF-8 >/dev/null 2>&1
 
-chown -R iranvless-panel:iranvless-panel . >/dev/null 2>&1
+chown -R hiddify-panel:hiddify-panel . >/dev/null 2>&1
 # apt install -y python3-dev
-for req in pip3 uwsgi python3 iranvlesspanel lastversion jq sqlite3mysql; do
+for req in pip3 uwsgi python3 hiddifypanel lastversion jq sqlite3mysql; do
     which $req >/dev/null 2>&1
     if [[ "$?" != 0 ]]; then
         apt --fix-broken install -y
         apt update
         apt install -y python3-pip jq python3-dev
         pip3 install pip
-        pip3 install -U iranvlesspanel lastversion uwsgi "requests<=2.29.0" sqlite3-to-mysql
+        pip3 install -U hiddifypanel lastversion uwsgi "requests<=2.29.0" sqlite3-to-mysql
         break
     fi
 done
@@ -24,7 +24,7 @@ done
 
 sed -i '/SQLALCHEMY_DATABASE_URI/d' app.cfg
 MYSQL_PASS=$(cat ../other/mysql/mysql_pass)
-echo "SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://iranvlesspanel:$MYSQL_PASS@127.0.0.1/iranvlesspanel'" >>app.cfg
+echo "SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://hiddifypanel:$MYSQL_PASS@127.0.0.1/hiddifypanel'" >>app.cfg
 
 # if [ -f iranvlesspanel.db ]; then
 #     sqlite3mysql -f iranvlesspanel.db -d iranvlesspanel -u iranvlesspanel -h 127.0.0.1 --mysql-password $MYSQL_PASS
@@ -41,9 +41,9 @@ echo "SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://iranvlesspanel:$MYSQL_PASS@127.
 ln -sf $(which uwsgi) /usr/local/bin/uwsgi >/dev/null 2>&1
 # iranvlesspanel init-db
 ln -sf $(pwd)/iranvless-panel.service /etc/systemd/system/iranvless-panel.service
-systemctl enable iranvless-panel.service
+systemctl enable hiddify-panel.service
 if [ -f "../config.env" ]; then
-    su iranvless-panel -c "iranvlesspanel import-config -c $(pwd)/../config.env"
+    su iranvless-panel -c "hiddifypanel import-config -c $(pwd)/../config.env"
     if [ "$?" == 0 ]; then
         rm -f config.env
         # echo "temporary disable removing config.env"
@@ -56,7 +56,7 @@ service cron reload >/dev/null 2>&1
 systemctl start iranvless-panel.service
 # systemctl status iranvless-panel.service --no-pager > /dev/null 2>&1
 
-echo "0 */6 * * * iranvless-panel $(pwd)/backup.sh" >/etc/cron.d/iranvless_auto_backup
+echo "0 */6 * * * hiddify-panel $(pwd)/backup.sh" >/etc/cron.d/iranvless_auto_backup
 service cron reload
 
 ##### download videos

@@ -1,6 +1,6 @@
 #!/bin/bash
-#ln -sf $(pwd)/hiddify-warp.service /etc/systemd/system/hiddify-warp.service
-systemctl disable hiddify-warp.service
+#ln -sf $(pwd)/iranvless-warp.service /etc/systemd/system/iranvless-warp.service
+systemctl disable iranvless-warp.service
 
 # if [[ $warp_mode == 'disabled' ]];then
 #   bash uninstall.sh
@@ -8,7 +8,7 @@ systemctl disable hiddify-warp.service
 
 if ! [ -f "wgcf-account.toml" ];then
     mv wgcf-account.toml wgcf-account.toml.backup
-    wgcf register --accept-tos -m hiddify -n $(hostname)
+    wgcf register --accept-tos -m iranvless -n $(hostname)
 fi
 
 #api.zeroteam.top/warp?format=wgcf for change warp

@@ -24,7 +24,7 @@ listen 443 {
     proto tls
     table https_hosts
 	# default 127.0.0.1:445
-	fallback  unix:/dev/shm/hiddify-xtls-main.sock
+	fallback  unix:/dev/shm/iranvless-xtls-main.sock
 	#proxy_protocol
 }
 
@@ -34,7 +34,7 @@ table https_hosts {
     sstlsdomain 127.0.0.1:1002 
     #shadowtlsdomain 127.0.0.1:1003 
     #ssrtlsdomain 127.0.0.1:1004
-    # defaultserverhost unix:/dev/shm/hiddify-xtls-main.sock 
+    # defaultserverhost unix:/dev/shm/iranvless-xtls-main.sock 
 	#proxy_protocol
 
 # pattern:

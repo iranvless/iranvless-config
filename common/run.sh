@@ -69,10 +69,10 @@ ip6tables-save > /etc/iptables/rules.v6
 #add2iptables "INPUT -p tcp --dport 9000 -j DROP"
 
 if [[ $ENABLE_AUTO_UPDATE == true ]]; then
-  echo "0 3 * * * root $(pwd)/../update.sh" > /etc/cron.d/hiddify_auto_update
+  echo "0 3 * * * root $(pwd)/../update.sh" > /etc/cron.d/iranvless_auto_update
   service cron reload
 else
-  rm -rf /etc/cron.d/hiddify_auto_update
+  rm -rf /etc/cron.d/iranvless_auto_update
   service cron reload
 fi
 

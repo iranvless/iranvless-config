@@ -61,7 +61,7 @@
 
 ***
 ## چرا هیدیفای؟
-هیدیفای تلفیقی از دو کلمه Hidden (مخفی شده) و Simplify (ساده سازی) است. پنلی با ويژگی ها و قابلیت‌های فراوان که به شما کمک می کند بدون دردسر و به صورت امن از اینترنت استفاده کنید. Hiddify نوعی VPN با کاربری ساده است که تضمین‌گر دسترسی به اینترنت آزاد با خیالی آسوده است.
+ایران ویلس تلفیقی از دو کلمه iran (مخفی شده) و vless (ساده سازی) است. پنلی با ويژگی ها و قابلیت‌های فراوان که به شما کمک می کند بدون دردسر و به صورت امن از اینترنت استفاده کنید. iranvless نوعی VPN با کاربری ساده است که تضمین‌گر دسترسی به اینترنت آزاد با خیالی آسوده است.
 
 ### ویژگی‌های جذاب 
 
@@ -111,13 +111,13 @@
 
 <details markdown="1"> <summary><h3>پروکسی هوشمند برای سایت های غیر ایرانی و فیلترشده</h3> (کلیک نمایید)</summary>
  
-با استفاده از کلاینت کلش و پنل هایدیفای می‌تونین در ۳ حالت به اینترنت وصل بشید. 
+با استفاده از کلاینت کلش و پنل ایران ویلس  می‌تونین در ۳ حالت به اینترنت وصل بشید. 
 
-۱. روش اول فقط سایت فیلترشده را از فیلترشکن عبور دهد.
+۱. روش اول فقط سایت فیلترشده را از وی پی ان عبور دهد.
 
-۲. فقط سایت های ایرانی بدون فیلترشکن باز شود (پیشنهادی)
+۲. فقط سایت های ایرانی بدون وی پی ان باز شود (پیشنهادی)
 
-۳. تمام سایت ها از فیلترشکن عبور کنند
+۳. تمام سایت ها از وی پی ان عبور کنند
 
 از طرف دیگر سعی شده راه‌حل ارائه شده در برابر کشف توسط نهادهای فیلتر کننده اینترنت مقاوم باشد و جلوی حملات معمول به سرور گرفته و امکان شناسایی حداقل باشد با این وجود فراموش نکنید که سایر پورت ها به جز ۲۲، ۸۰ و ۴۴۳ را غیر فعال کنید
 
@@ -127,7 +127,7 @@
 
 
 <details  markdown="1"> <summary>سیستم‌عامل‌های پشتیبانی شده</summary>
-هایدیفای روی اوبونتو ۲۰.۰۴ و ۲۲.۰۴ تست شده است.
+ایران ویلس روی اوبونتو ۲۰.۰۴ و ۲۲.۰۴ تست شده است.
 Ubuntu arm64 or amd64
 </details>
 
@@ -135,7 +135,7 @@ Ubuntu arm64 or amd64
 
 <details  markdown="1"> <summary>تست سرعت</summary>
 
-از این طریق میتوان سرعت سرور بدون فیلترشکن و با فیلترشکن را بررسی کرد
+از این طریق میتوان سرعت سرور بدون وی پی ان و با وی پی ان را بررسی کرد
 
 ![image](https://user-images.githubusercontent.com/114227601/210183115-4e1f4186-421e-4316-8082-3ce53275adc7.png)
 
@@ -210,18 +210,18 @@ Ubuntu arm64 or amd64
 * برنامه‌نویسی فلاتر
 <!--
 ## راه های ارتباط با ما
-* ایمیل: [hiddify@gmail.com](mailto:hiddify@gmail.com)
-* اطلاع رسانی: [کانال تلگرام](https://t.me/hiddify)
-* رفع مشکل: [گروه تلگرام](https://t.me/hiddify_board)
+* ایمیل: [iranvless@gmail.com](mailto:iranvless@gmail.com)
+* اطلاع رسانی: [کانال تلگرام](https://t.me/iranvless)
+* رفع مشکل: [گروه تلگرام](https://t.me/iranvless_board)
 
 </div>
 -->
 </br>
 <div align=center>
     
-[![Email](https://img.shields.io/badge/Gmail-hiddify@gmail.com-green?style=flat-square&logo=gmail)](mailto:hiddify@gmail.com)
+[![Email](https://img.shields.io/badge/Gmail-iranvless@gmail.com-green?style=flat-square&logo=gmail)](mailto:iranvless@gmail.com)
 [![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)
-[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
+[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Firanvless_board)](https://telegram.dog/hiddify_board)
 [![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)
 [![Twitter](https://img.shields.io/twitter/follow/hiddify_com?color=%231DA1F2&logo=twitter&logoColor=1DA1F2&style=flat-square)](https://twitter.com/intent/follow?screen_name=hiddify_com)
 
@@ -232,8 +232,8 @@ Ubuntu arm64 or amd64
  </p>
  
 <p align=center> 
-<a href="https://github.com/hiddify/hiddify-config/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hiddify/hiddify-config" />
+<a href="https://github.com/iranvless/iranvless-config/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=iranvless/iranvless-config" />
 </a>
 </p>
 <p align=center>

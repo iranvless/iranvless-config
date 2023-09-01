@@ -15,7 +15,7 @@ for req in pip3 uwsgi python3 iranvlesspanel lastversion jq sqlite3mysql; do
         apt update
         apt install -y python3-pip jq python3-dev
         pip3 install pip
-        pip3 install -U hiranvlesspanel lastversion uwsgi "requests<=2.29.0" sqlite3-to-mysql
+        pip3 install -U iranvlesspanel lastversion uwsgi "requests<=2.29.0" sqlite3-to-mysql
         break
     fi
 done
@@ -24,7 +24,7 @@ done
 
 sed -i '/SQLALCHEMY_DATABASE_URI/d' app.cfg
 MYSQL_PASS=$(cat ../other/mysql/mysql_pass)
-echo "SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://hiddifypanel:$MYSQL_PASS@127.0.0.1/iranvlesspanel'" >>app.cfg
+echo "SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://iranvlesspanel:$MYSQL_PASS@127.0.0.1/iranvlesspanel'" >>app.cfg
 
 # if [ -f iranvlesspanel.db ]; then
 #     sqlite3mysql -f iranvlesspanel.db -d iranvlesspanel -u iranvlesspanel -h 127.0.0.1 --mysql-password $MYSQL_PASS

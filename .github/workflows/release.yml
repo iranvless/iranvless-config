@@ -21,17 +21,17 @@ jobs:
   #     - uses: actions/checkout@v2
   #     - name: Install project
   #       run: |
-  #         sudo mkdir /opt/hiddify-config
-  #         sudo cp -r * /opt/hiddify-config/
+  #         sudo mkdir /opt/iranvless-config
+  #         sudo cp -r * /opt/iranvless-config/
   #         cd /opt/hiddify-config/
   #         sudo bash install.sh
   #     - name: check working
   #       env:
-  #         SQLALCHEMY_DATABASE_URI: sqlite:////opt/hiddify-config/hiddify-panel/database.db
+  #         SQLALCHEMY_DATABASE_URI: sqlite:////opt/hiddify-config/iranvless-panel/database.db
   #       run: |
-  #         cd /opt/hiddify-config/
+  #         cd /opt/iranvless-config/
   #         grep -q -e '-----Finished!-----' log/system/0-install.log 
-  #         cd hiddify-panel;hiddifypanel all-configs
+  #         cd iranvless-panel;iranvlesspanel all-configs
 
 
   release:
@@ -56,7 +56,7 @@ jobs:
           sudo apt install -y zip
       - name: zip
         run: |
-            zip -r hiddify-config.zip .  -x .**\*
+            zip -r iranvless-config.zip .  -x .**\*
       - name: Generate Changelog
         run: .github/release_message.sh > release_message.md
       - name: Release

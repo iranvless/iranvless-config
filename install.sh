@@ -35,9 +35,9 @@ function update_progress() {
 
 function set_config_from_hpanel(){
 
-        hiddify=`cd hiddify-panel;python3 -m hiddifypanel all-configs`
+        hiddify=`cd iranvless-panel;python3 -m iranvlesspanel all-configs`
         if [[ $? != 0 ]];then
-                error "Exception in Hiddify Panel. Please send the log to hiddify@gmail.com"
+                error "Exception in iranvless Panel. Please send the log to iranvless@gmail.com"
                 echo "4">log/error.lock
                 exit 4
         fi
@@ -281,7 +281,7 @@ function do_for_all() {
 
 
 function main(){
-        update_progress "Please wait..." "We are going to install Hiddify..."  0
+        update_progress "Please wait..." "We are going to install iranvless..."  0
         export ERROR=0
         rm -rf log/system/xray*
         
@@ -290,7 +290,7 @@ function main(){
         
         if [ "$MODE" != "apply_users" ];then
                 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.8.4 || echo "error in updating xray"
-                runsh install.sh hiddify-panel
+                runsh install.sh iranvless-panel
         fi
         # source common/set_config_from_hpanel.sh
         update_progress "" "Reading Configs from Panel..." 5
@@ -350,12 +350,12 @@ function main(){
         #         echo "xray configuration failed "
         #         exit 33
         # fi
-        echo "---------------------Finished!------------------------"
+        echo "-----------------------Finished!------------------------"
         rm log/install.lock
         if [ "$MODE" != "apply_users" ];then
-                systemctl restart hiddify-panel
+                systemctl restart iranvless-panel
         fi
-        systemctl start hiddify-panel
+        systemctl start iranvless-panel
 
 }       
 
@@ -375,7 +375,7 @@ function check(){
                 cat use-link
                         
         fi
-        for s in hiddify-xray hiddify-singbox hiddify-nginx hiddify-haproxy;do
+        for s in iranvless-xray iranvless-singbox iranvless-nginx iranvless-haproxy;do
                 s=${s##*/}
                 s=${s%%.*}
                 if [[ "$(systemctl is-active $s)" != "active" ]];then
@@ -409,7 +409,7 @@ if [[ "$?" != 0 ]];then
         apt install -y dialog
 fi
 echo "0"> log/error.lock
-BACKTITLE="Welcome to Hiddify Panel (config version=$(cat VERSION))"
+BACKTITLE="Welcome to iranvless Panel (config version=$(cat VERSION))"
 width=$(tput cols)
 if [[ $? != 0 ]] || (( $width < 20 ));then 
         width=20

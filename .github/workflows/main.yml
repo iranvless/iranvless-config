@@ -25,14 +25,14 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install project
         run: |
-          sudo mkdir /opt/hiddify-config
-          sudo cp -r * /opt/hiddify-config/
-          cd /opt/hiddify-config/
+          sudo mkdir /opt/iranvless-config
+          sudo cp -r * /opt/iranvless-config/
+          cd /opt/iranvless-config/
           sudo bash install.sh
       - name: check working
         env:
-          SQLALCHEMY_DATABASE_URI: sqlite:////opt/hiddify-config/hiddify-panel/database.db
+          SQLALCHEMY_DATABASE_URI: sqlite:////opt/iranvless-config/iranvless-panel/database.db
         run: |
           cd /opt/hiddify-config/
           grep -q -e '-----Finished!-----' log/system/0-install.log 
-          cd hiddify-panel;hiddifypanel all-configs
+          cd iranvless-panel;iranvlesspanel all-configs

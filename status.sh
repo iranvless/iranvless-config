@@ -10,7 +10,7 @@ function main(){
 # SINGBOX_NEW_CONFIG_ERROR=$?
 
 
-# systemctl status --no-pager hiddify-nginx hiddify-xray hiddify-singbox hiddify-haproxy|cat
+# systemctl status --no-pager iranvless-nginx iranvless-xray iranvless-singbox iranvless-haproxy|cat
 
 bash other/warp/status.sh
 

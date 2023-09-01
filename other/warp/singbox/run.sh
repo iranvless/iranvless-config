@@ -1,6 +1,6 @@
 #!/bin/bash
-ln -sf $(pwd)/hiddify-warp.service /etc/systemd/system/hiddify-warp.service
-systemctl enable hiddify-warp.service
+ln -sf $(pwd)/iranvless-warp.service /etc/systemd/system/iranvless-warp.service
+systemctl enable iranvless-warp.service
 
 # if [[ $warp_mode == 'disabled' ]];then
 #   bash uninstall.sh
@@ -124,8 +124,8 @@ fi
 # singbox_warp_conf=$(cat singbox_warp_conf.json)
 # singbox_warp_conf=$(echo "$singbox_warp_conf" | tr '\n' ' ')
 # escaped_singbox_warp_conf=$(printf '%s\n' "$singbox_warp_conf" | sed -e 's/[\/&]/\\&/g')
-# sed "s|//hiddify_warp|$escaped_singbox_warp_conf|g"  singbox_demo.json.template > singbox_demo.json
-# sed "s|//hiddify_warp|$escaped_singbox_warp_conf|g"  warp-singbox.json.template > warp-singbox.json
+# sed "s|//iranvless_warp|$escaped_singbox_warp_conf|g"  singbox_demo.json.template > singbox_demo.json
+# sed "s|//iranvless_warp|$escaped_singbox_warp_conf|g"  warp-singbox.json.template > warp-singbox.json
 
 
 
@@ -161,9 +161,9 @@ fi
 
 
 
-systemctl reload hiddify-warp.service
-systemctl start  hiddify-warp.service
-#systemctl status hiddify-warp.service
+systemctl reload iranvless-warp.service
+systemctl start  iranvless-warp.service
+#systemctl status iranvless-warp.service
 
 sleep 5
 echo "Testing singbox warp"

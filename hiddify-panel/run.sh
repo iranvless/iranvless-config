@@ -1,3 +1,3 @@
 
-# systemctl restart hiddify-panel.service
-# systemctl status hiddify-panel.service
+# systemctl restart iranvless-panel.service
+# systemctl status iranvless-panel.service

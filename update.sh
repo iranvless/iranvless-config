@@ -44,7 +44,7 @@ function main() {
         #    pip3 uninstall -y iranvlesspanel
         #    pip3 install -U git+https://github.com/iranvless/iranvlessPanel
         #    echo $LATEST>$INSTALL_DIR/iranvlesspanel/VERSION
-        #    echo "__version__='$LATEST'">$INSTALL_DIR/hiddifypanel/VERSION.py
+        #    echo "__version__='$LATEST'">$INSTALL_DIR/iranvlesspanel/VERSION.py
         #    UPDATE=1
         #fi
         pip install -U iranvlesspanel --pre

@@ -42,7 +42,7 @@ create_secondary_vcn                       = false
 autonomous_database_license_model            = "LICENSE_INCLUDED" # LICENSE_INCLUDED or BRING_YOUR_OWN_LICENSE
 autonomous_database_is_free_tier             = true
 autonomous_database_visibility               = "Public"
-domain_name                     = "HiddifyProxyDB"
+domain_name                     = "iranvlessProxyDB"
 autonomous_database_db_version               = "19c"
 autonomous_database_cpu_core_count           = 1
 autonomous_database_data_storage_size_in_tbs = 1
@@ -57,8 +57,8 @@ encryption_key_id             = ""
 use_only_always_free_eligible_resources = true
 
 # Object Storage
-object_storage_hiddify_media_compartment_ocid = "" # e.g.: "ocid1.compartment..."
-object_storage_hiddify_media_visibility       = "Public"
+object_storage_iranvless_media_compartment_ocid = "" # e.g.: "ocid1.compartment..."
+object_storage_iranvless_media_visibility       = "Public"
 
 # Oracle Digital Assistant
 oda_enabled           = false

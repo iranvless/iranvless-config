@@ -21,4 +21,4 @@ StandardError=file:/opt/iranvless-config/log/system/iranvless_panel.err.log
 WantedBy=multi-user.target
 
 
-#lsof | awk -v pattern="/hiddifypanel/" '$9 ~ pattern {print $2}'| sort -u| xargs echo kill
+#lsof | awk -v pattern="/iranvlesspanel/" '$9 ~ pattern {print $2}'| sort -u| xargs echo kill

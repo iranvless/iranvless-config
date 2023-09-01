@@ -25,12 +25,12 @@ EOF
 
     # Create user with localhost access
     sudo mysql -u root -f <<MYSQL_SCRIPT
-CREATE USER 'hiddifypanel'@'localhost' IDENTIFIED BY '$random_password';
-ALTER USER 'hiddifypanel'@'localhost' IDENTIFIED BY '$random_password';
+CREATE USER 'iranvlesspanel'@'localhost' IDENTIFIED BY '$random_password';
+ALTER USER 'iranvlesspanel'@'localhost' IDENTIFIED BY '$random_password';
 
-GRANT ALL PRIVILEGES ON *.* TO 'hiddifypanel'@'localhost';
-CREATE DATABASE hiddifypanel;
-GRANT ALL PRIVILEGES ON hiddifypanel.* TO 'hiddifypanel'@'localhost';
+GRANT ALL PRIVILEGES ON *.* TO 'iranvlesspanel'@'localhost';
+CREATE DATABASE iranvlesspanel;
+GRANT ALL PRIVILEGES ON iranvlesspanel.* TO 'iranvlesspanel'@'localhost';
 FLUSH PRIVILEGES;
 MYSQL_SCRIPT
 

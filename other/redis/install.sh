@@ -7,9 +7,9 @@ if ! command -v redis-server ;then
     sudo apt install -y redis-server
 fi
 systemctl disable --now redis-server
-ln -sf $(pwd)/hiddify-redis.service /etc/systemd/system/hiddify-redis.service
-touch /opt/hiddify-config/log/system/redis-server.log
-chown redis:redis /opt/hiddify-config/log/system/redis-server.log
-chown redis:redis /opt/hiddify-config/other/redis
-systemctl enable hiddify-redis
-systemctl start hiddify-redis
+ln -sf $(pwd)/iranvless-redis.service /etc/systemd/system/iranvless-redis.service
+touch /opt/iranvless-config/log/system/redis-server.log
+chown redis:redis /opt/iranvless-config/log/system/redis-server.log
+chown redis:redis /opt/iranvless-config/other/redis
+systemctl enable iranvless-redis
+systemctl start iranvless-redis

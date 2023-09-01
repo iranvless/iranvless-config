@@ -2,8 +2,8 @@
 # Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.
 #
 
-title: "Hiddify MultiProxy using Always-Free resources"
-description: "more info on https://github.com/hiddify/hiddify-config"
+title: "iranvless MultiProxy using Always-Free resources"
+description: "more info on https://github.com/iranvless/iranvless-config"
 schemaVersion: 1.1.0
 version: "20190304"
 
@@ -190,12 +190,12 @@ variables:
                 - "VM.Standard.A1.Flex"
 
 outputGroups:
-  - title: HiddifyProxy App details
+  - title: iranvlessProxy App details
     outputs:
       - lb_public_url
       - lb_nip_host_url
-      - hiddify_source_code
-      - hiddify_version
+      - iranvless_source_code
+      - iranvless_version
 
   - title: Passwords and Keys
     outputs:
@@ -222,7 +222,7 @@ outputs:
 
   lb_proxy_url:
     type: link
-    title: Hiddify Proxy URL
+    title: iranvless Proxy URL
     visible: true
 
   generated_private_key_pem:

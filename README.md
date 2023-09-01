@@ -72,13 +72,13 @@ Hiddify is a powerful and professional anti-censorship toolbox, which is a multi
 
 
 ***
-## Why Hiddify?
-Hiddify is a mixture of Hidden and Simplify. It is a panel with a wide range of features and capabilities that helps you enjoy hassle-free and secure internet browsing. Serving as a user-friendly VPN solution, Hiddify ensures that you can access the free internet with ease and peace of mind. 
+## Why iranvless?
+iranvless is a mixture of Hidden and Simplify. It is a panel with a wide range of features and capabilities that helps you enjoy hassle-free and secure internet browsing. Serving as a user-friendly VPN solution, Hiddify ensures that you can access the free internet with ease and peace of mind. 
 
 ### Attractive features
 - **Quick installation**
 - Multiple core **Xray** and **SingBox**
-- **Smart proxy** (Hiddify and Clash client)
+- **Smart proxy** (iranvless and Clash client)
 - **Automatic update**
 - **Automatic backup** (every 6 hours)
 - **Automatic connection to Cloudflare**

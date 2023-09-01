@@ -122,7 +122,7 @@ And dozens of other features that you will notice upon installation.
 
 <details markdown="1"> <summary><h3>Smart proxy for domestic and filtered sites</h3> (click here)</summary>
  
-You can connect to the internet in 3 modes using Hiddify(Clash) client and Hiddify panel. 
+You can connect to the internet in 3 modes using Hiddify(Clash) client and iranvless panel. 
 1. This method only circumvents filtered websites via the proxies.
 2. This method circumvents all websites except domestic websites based in China, Russia and Iran. This way the domestic websites can be opened without any proxies (recommended)
 3. This method circumvents all websites. 

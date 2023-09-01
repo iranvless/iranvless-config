@@ -3,8 +3,8 @@
 source common/utils.sh
 
 #PACKAGE_MODE=$(get_package_mode)
-#LATEST_CONFIG_VERSION=$(get_release_version hiddify-config)
-#LATEST_PANEL_VERSION=$(get_release_version hiddifypanel)
+#LATEST_CONFIG_VERSION=$(get_release_version iranvless-config)
+#LATEST_PANEL_VERSION=$(get_release_version iranvlesspanel)
 
 CURRENT_CONFIG_VERSION=$(get_installed_config_version)
 CURRENT_PANEL_VERSION=$(get_installed_panel_version)
@@ -16,15 +16,15 @@ CURRENT_PANEL_VERSION=$(get_installed_panel_version)
 # fi
 
 cd "$(dirname -- "$0")"
-cd /opt/hiddify-config/
+cd /opt/iranvless-config/
 
 function menu() {
 
     HEIGHT=20
     WIDTH=70
     CHOICE_HEIGHT=12
-    BACKTITLE="Hiddify Panel (Config=v$CURRENT_CONFIG_VERSION Panel=v$CURRENT_PANEL_VERSION)   $UPDATE_NEED  "
-    TITLE="Hiddify Panel $PACKAGE_MODE"
+    BACKTITLE="iranvless Panel (Config=v$CURRENT_CONFIG_VERSION Panel=v$CURRENT_PANEL_VERSION)   $UPDATE_NEED  "
+    TITLE="iranvless Panel $PACKAGE_MODE"
     MENU="Choose one of the following options:"
 
     OPTIONS=(status "View status of system"
@@ -51,7 +51,7 @@ function menu() {
         exit 1
     fi
     clear
-    echo "Hiddify: Command $CHOICE"
+    echo "iranvless: Command $CHOICE"
     echo "=========================================="
     NEED_KEY=1
     case $CHOICE in
@@ -85,19 +85,19 @@ function menu() {
             downgrade "Downgrade to Version 7"
             enable "show this menu on start up"
             disable "disable this menu"
-            uninstall "Uninstall hiddify :("
+            uninstall "Uninstall iranvless :("
             purge "Uninstall completely and remove database :("
         )
         CHOICE=$(whiptail --clear --backtitle "$BACKTITLE" --title "$TITLE" --menu "$MENU" $HEIGHT $WIDTH $CHOICE_HEIGHT "${OPTIONS[@]}" 3>&1 1>&2 2>&3)
         case $CHOICE in
         "enable")
-            echo "/opt/hiddify-config/menu.sh" >>~/.bashrc
-            echo "cd /opt/hiddify-config/" >>~/.bashrc
+            echo "/opt/iranvless-config/menu.sh" >>~/.bashrc
+            echo "cd /opt/iranvless-config/" >>~/.bashrc
             NEED_KEY=0
             ;;
         "disable")
-            sed -i "s|/opt/hiddify-config/menu.sh||g" ~/.bashrc
-            sed -i "s|cd /opt/hiddify-config/||g" ~/.bashrc
+            sed -i "s|/opt/iranvless-config/menu.sh||g" ~/.bashrc
+            sed -i "s|cd /opt/iranvless-config/||g" ~/.bashrc
             NEED_KEY=0
             ;;
         "uninstall")
@@ -147,8 +147,8 @@ function menu() {
         ;;
     "admin")
         (
-            cd hiddify-panel
-            python3 -m hiddifypanel admin-links
+            cd iranvless-panel
+            python3 -m iranvlesspanel admin-links
         )
         ;;
     "status")

@@ -42,5 +42,5 @@ rm /etc/nginx/conf.d/speedtest.conf
 # fi
 
 mkdir run
-ln -sf $(pwd)/hiddify-nginx.service /etc/systemd/system/hiddify-nginx.service
-systemctl enable hiddify-nginx.service
+ln -sf $(pwd)/iranvless-nginx.service /etc/systemd/system/iranvless-nginx.service
+systemctl enable iranvless-nginx.service

@@ -1,11 +1,11 @@
-ln -sf $(pwd)/hiddify-singbox.service /etc/systemd/system/hiddify-singbox.service
-systemctl enable hiddify-singbox.service
+ln -sf $(pwd)/iranvless-singbox.service /etc/systemd/system/iranvless-singbox.service
+systemctl enable iranvless-singbox.service
 
 DOMAINS=${MAIN_DOMAIN//;/ }
 USERS=${USER_SECRET//;/ }
 
 for USER in $USERS; do
-	GUID_USER="${USER:0:8}-${USER:8:4}-${USER:12:4}-${USER:16:4}-${USER:20:12}@hiddify.com"
+	GUID_USER="${USER:0:8}-${USER:8:4}-${USER:12:4}-${USER:16:4}-${USER:20:12}@iranvless.com"
 	final=$final,\"$GUID_USER\"
 done
 final=${final:1}
@@ -131,18 +131,18 @@ fi
 # sing-box check -C configs
 echo "ignoring singbox test"
 if  [[ $? == 0 ]];then
-	#systemctl restart hiddify-singbox.service
-    systemctl reload hiddify-singbox.service
-	systemctl start hiddify-singbox.service
-	systemctl status hiddify-singbox.service --no-pager
+	#systemctl restart iranvless-singbox.service
+    systemctl reload iranvless-singbox.service
+	systemctl start iranvless-singbox.service
+	systemctl status iranvless-singbox.service --no-pager
 else
 	echo "Error in singbox Config!!!! do not reload singbox service"
 	sleep 3
 	singbox check -C configs
 	if  [[ $? == 0 ]];then
-		systemctl reload hiddify-singbox.service
-        systemctl start hiddify-singbox.service
-        systemctl status hiddify-singbox.service --no-pager
+		systemctl reload iranvless-singbox.service
+        systemctl start iranvless-singbox.service
+        systemctl status iranvless-singbox.service --no-pager
 	else
 		echo "Error in singbox Config!!!! do not reload singbox service"
 	fi

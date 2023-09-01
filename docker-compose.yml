@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  hiddify:
-    image: hiddify
+  iranvless:
+    image: iranvless
     build: .
     ports:
       - 443:443
@@ -11,5 +11,5 @@ services:
     # cap_add:
     #   - NET_ADMIN
     volumes:
-       - ./hiddify-panel/hiddifypanel.db:/opt/hiddify-config/hiddify-panel/hiddifypanel.db
-       - ./ssl/:/opt/hiddify-config/ssl/
+       - ./iranvless-panel/iranvlesspanel.db:/opt/iranvless-config/iranvless-panel/iranvlesspanel.db
+       - ./ssl/:/opt/iranvless-config/ssl/

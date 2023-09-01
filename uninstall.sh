@@ -6,12 +6,12 @@ function main(){
         systemctl kill $s
         systemctl disable $s            
     done
-    rm -rf /etc/cron.d/hiddify*
+    rm -rf /etc/cron.d/iranvless*
     service cron reload
     if [[ "$1" == "purge" ]];then
-        cd .. && rm -rf hiddify-panel
+        cd .. && rm -rf iranvless-panel
         apt remove -y nginx gunicorn python3-pip python3
-        echo "We have completely removed hiddify panel"
+        echo "We have completely removed iranvless panel"
     fi
 }
 

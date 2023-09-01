@@ -13,7 +13,7 @@
 			"version": 3,
 			"password": "BASE_PROXY_PATH",
 			"users": [
-    			{"name": "defaultuserguidsecret@hiddify.com", "password": "defaultuserguidsecret"}
+    			{"name": "iranvless@gmail.com", "password": "defaultuserguidsecret"}
   			],
 			"handshake": {
 				"server": "shadowtlsdomain",

@@ -3,7 +3,7 @@
 cd $( dirname -- "$0"; )
 function main(){
     echo "trying to update usage"
-    pgrep -f 'update-usage' || su hiddify-panel -c "python3 -m hiddifypanel update-usage"
+    pgrep -f 'update-usage' || su iranvless-panel -c "python3 -m iranvlesspanel update-usage"
     rm ../log/update_usage.lock
 }
 

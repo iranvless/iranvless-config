@@ -26,5 +26,5 @@ fi
 # fi
 
 
-systemctl reload hiddify-nginx
-systemctl start hiddify-nginx
+systemctl reload iranvless-nginx
+systemctl start iranvless-nginx

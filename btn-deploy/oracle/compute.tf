@@ -5,7 +5,7 @@
 resource "oci_core_instance" "app_instance" {
   availability_domain                 = random_shuffle.compute_ad.result[count.index % length(random_shuffle.compute_ad.result)]
   compartment_id                      = var.compartment_ocid
-  display_name                        = "hiddify-${random_string.deploy_id.result}-${count.index}"
+  display_name                        = "iranvless-${random_string.deploy_id.result}-${count.index}"
   shape                               = local.instance_shape
   freeform_tags                       = local.common_tags
 

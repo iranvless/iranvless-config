@@ -8,5 +8,5 @@ if [[ "$?" != 0 ]];then
 
 fi
 
-ln -sf $(pwd)/hiddify-caddy.service /etc/systemd/system/hiddify-caddy.service
-systemctl enable hiddify-caddy.service
+ln -sf $(pwd)/iranvless-caddy.service /etc/systemd/system/iranvless-caddy.service
+systemctl enable iranvless-caddy.service

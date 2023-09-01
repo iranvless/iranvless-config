@@ -11,7 +11,7 @@
 			"proxy_protocol":true,	
 			"type": "trojan",
 			"users": [
-    			{"name": "defaultuserguidsecret@hiddify.com", "password": "defaultuserguidsecret"}
+    			{"name": "iranvless@gmail.com", "password": "defaultuserguidsecret"}
   			],
 			"transport": {
 				"type": "ws",
